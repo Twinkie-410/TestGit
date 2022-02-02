@@ -33,7 +33,7 @@ namespace Clones
                     clones[number].Relearn();
                     break;
                 case "clone":
-                    clones.Add(clones[number].CloneThis());
+                    clones.Add(clones[number].CloneThis(null));
                     break;
                 case "check":
                     return clones[number].Check();
@@ -76,7 +76,7 @@ namespace Clones
                 rollbackProgram.RemoveLast();
             }
 
-            public Clone CloneThis()
+            public Clone CloneThis(string a)
             {
                 return new Clone(new Stack<string>
                     {
